@@ -43,6 +43,7 @@ function setCanvasSize() {
         canvasSize = window.innerHeight *0.7;
     }
     
+    canvasSize = Number(canvasSize.toFixed(0));
     canvas.setAttribute('width', canvasSize)
     canvas.setAttribute('height', canvasSize)
     
@@ -220,7 +221,7 @@ function showRecord() {
 
  function moveDown() {
     console.log('Abajo');
-    if ((playerPosition.y.toFixed(3) + elementsSize.toFixed(3)) > canvasSize.toFixed(3)) {
+    if ((playerPosition.y.toFixed(3) + elementsSize.toFixed(3)) > canvasSize) {
         console.log('Out');
     }else{
         playerPosition.y += elementsSize;
@@ -230,7 +231,7 @@ function showRecord() {
 
  function moveRight() {
     console.log('Derecha');
-    if ((playerPosition.x.toFixed(3) + elementsSize.toFixed(3)) > canvasSize.toFixed(3)) {
+    if ((playerPosition.x.toFixed(5) + elementsSize.toFixed(5)) > canvasSize) {
         console.log('Out');
     }else{
         playerPosition.x += elementsSize;
